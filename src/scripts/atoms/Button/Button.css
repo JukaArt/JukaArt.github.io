@@ -1,0 +1,268 @@
+@value colorBase, colorWhite, colorDarkBase, colorAlto, colorGrayDog, colorWetAsphalt, colorConcrete, colorVividRed from '~Styles/vars/colors.css';
+
+:root {
+  --time: 0.1s;
+  --ease: ease-in;
+}
+
+/* GENERAL */
+
+.root {
+  @mixin center;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font: 14px/24px 'Ubuntu Medium';
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background: none;
+  transition: background var(--time) var(--ease),
+  border var(--time) var(--ease),
+  opacity var(--time) var(--ease),
+  color var(--time) var(--ease);
+
+  &.withContent {
+    min-width: 80px;
+  }
+}
+
+.content > * {
+  flex-shrink: 0;
+
+  &:not(:last-child):not(:only-child) {
+    margin-right: 4px;
+  }
+}
+
+.content {
+  display: flex;
+  padding: * 4px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.text {
+  padding: * 8px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  flex: 1;
+}
+
+.preloader {
+  position: absolute;
+}
+
+.loading {
+  .content,
+  .icon {
+    opacity: 0;
+  }
+}
+
+.disabled {
+  cursor: default;
+}
+
+/* ________ */
+
+/* MODIFICATIONS */
+
+/* WIDTH */
+
+.width-full {
+  width: 100%;
+}
+
+/* SIZES */
+
+.size-sm {
+  padding: 8px;
+  font-size: 12px;
+  line-height: 16px;
+  height: 32px;
+
+  .preloader {
+    size: 16px;
+  }
+}
+
+.size-md {
+  padding: 8px;
+  height: 40px;
+
+  .preloader {
+    size: 24px;
+  }
+}
+
+.size-lg {
+  padding: 16px;
+  height: 56px;
+
+  .preloader {
+    size: 24px;
+  }
+}
+
+/* MAIN COLORS */
+
+.color-primary {
+  &.mainColor-base {
+    background-color: colorBase;
+  }
+
+  &.mainColor-vividRed {
+    background-color: colorVividRed;
+  }
+}
+
+/* COLORS */
+
+.color-primary {
+  color: colorWhite;
+
+  :global .path {
+    fill: colorWhite;
+  }
+
+  &::before {
+    content: '';
+    top: 0;
+    left: 0;
+    size: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.1s ease-in;
+  }
+
+  &:not(.disabled) {
+    &.loading,
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  &.disabled {
+    background-color: colorAlto;
+  }
+}
+
+.color-secondary {
+  color: colorBase;
+  background-color: colorWhite;
+
+  :global .path {
+    fill: colorBase;
+  }
+
+  &.disabled {
+    color: colorGrayDog;
+    border-color: colorAlto;
+
+    :global .path {
+      fill: colorGrayDog;
+    }
+  }
+}
+
+/* THEME COLORS MODIFICATION */
+
+.theme-dark.color-primary {
+  &.disabled {
+    color: (256, 256, 256, 0.5);
+    background-color: (256, 256, 256, 0.1);
+
+    :global .path {
+      fill: (256, 256, 256, 0.5);
+    }
+  }
+}
+
+.theme-light.color-secondary {
+  border: 1px solid colorBase;
+
+  &:not(.disabled) {
+    &.loading,
+    &:hover {
+      background-color: rgba(78, 66, 228, 0.1);
+    }
+  }
+}
+
+.theme-dark.color-secondary {
+  &:not(.disabled) {
+    &.loading,
+    &:hover {
+      background-color: rgba(256, 256, 256, 0.5);
+    }
+  }
+
+  &.disabled {
+    color: rgba(256, 256, 256, 0.5);
+    background-color: rgba(256, 256, 256, 0.1);
+
+    :global .path {
+      fill: rgba(256, 256, 256, 0.5);
+    }
+  }
+}
+
+.theme-light.color-normal {
+  color: colorWetAsphalt;
+  background-color: colorWhite;
+  border: 1px solid colorAlto;
+
+  :global .path {
+    fill: colorWetAsphalt;
+  }
+
+  &:not(.disabled) {
+    &.loading,
+    &:hover {
+      background-color: colorConcrete;
+    }
+  }
+
+  &.disabled {
+    color: colorGrayDog;
+
+    :global .path {
+      fill: colorGrayDog;
+    }
+  }
+}
+
+.theme-dark.color-normal {
+  color: colorWhite;
+  border: 1px solid colorWhite;
+  background: none;
+
+  :global .path {
+    fill: colorWhite;
+  }
+
+  &:not(.disabled) {
+    &.loading,
+    &:hover {
+      color: colorWetAsphalt;
+      background-color: colorWhite;
+
+      :global .path {
+        fill: colorWetAsphalt;
+      }
+    }
+  }
+
+  &.disabled {
+    opacity: 0.5;
+  }
+}
+
+/* ________ */

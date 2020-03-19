@@ -1,0 +1,116 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "module": "es2015",
+    "target": "es6",
+    "lib": [
+      "dom",
+      "es6"
+    ],
+    "jsx": "react",
+    "moduleResolution": "node",
+    "baseUrl": "src",
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "resolveJsonModule": true,
+    "checkJs": false,
+    "plugins": [
+      {
+        "name": "css-module-types"
+      }
+    ],
+    "paths": {
+      "Actions/*": [
+        "scripts/actions/*"
+      ],
+      "Api/*": [
+        "scripts/api/*"
+      ],
+      "Mutations/*": [
+        "scripts/api/mutations/*"
+      ],
+      "GraphTypes/*": [
+        "graphql/ts/__generated__/*"
+      ],
+      "Store": [
+        "scripts/store"
+      ],
+      "Page/*": [
+        "scripts/pages/*"
+      ],
+      "AdminPage/*": [
+        "scripts/pages/admin/*"
+      ],
+      "AdvertiserPage/*": [
+        "scripts/pages/advertiser/*"
+      ],
+      "ContractorPage/*": [
+        "scripts/pages/contractor/*"
+      ],
+      "CommonPage/*": [
+        "scripts/pages/common/*"
+      ],
+      "PublicPage/*": [
+        "scripts/pages/public/*"
+      ],
+      "Images/*": [
+        "files/images/*"
+      ],
+      "Util/*": [
+        "scripts/utils/*"
+      ],
+      "Containers/*": [
+        "scripts/containers/*"
+      ],
+      "Components/*": [
+        "scripts/components/*"
+      ],
+      "Types/*": [
+        "scripts/types/*"
+      ],
+      "Constants": [
+        "scripts/constants/*"
+      ],
+      "Modal/*": [
+        "scripts/modals/*"
+      ],
+      "Templates/*": [
+        "scripts/templates/*"
+      ],
+      "Selectors/*": [
+        "scripts/selectors/*"
+      ],
+      "Locales/*": [
+        "scripts/locales/*"
+      ],
+      "Molecules/*": [
+        "scripts/molecules/*"
+      ],
+      "Atoms/*": [
+        "scripts/atoms/*"
+      ],
+      "Icons": [
+        "scripts/icons/index"
+      ],
+      "Styles": [
+        "stylesheets/*"
+      ]
+    }
+  },
+  "include": [
+    "global.d.ts",
+    "images.d.ts",
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "./src/**/*.js",
+    "./src/**/*.jsx"
+  ]
+}

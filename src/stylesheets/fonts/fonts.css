@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,500,700');
+
+@font-face {
+  font-family: "Ionicons";
+  src: url("./ionicons.eot");
+  src: url("./ionicons.eot") format("embedded-opentype"),
+  url("./ionicons.ttf") format("truetype"),
+  url("./ionicons.woff") format("woff"),
+  url("./ionicons.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ubuntu Regular";
+  src: url("./Ubuntu-R.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ubuntu Light";
+  src: url("./Ubuntu-L.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ubuntu Medium";
+  src: url("./Ubuntu-M.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ubuntu Bold";
+  src: url("./Ubuntu-B.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

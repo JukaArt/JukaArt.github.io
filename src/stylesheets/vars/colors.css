@@ -1,0 +1,63 @@
+/* main colors */
+
+@value colorWhite: #ffffff;
+@value white: #ffffff;
+@value black: #000000;
+@value greyishBrown: #404040;
+@value colorWetAsphalt: #404040;
+
+@value base: #4E42E4;
+@value darkBase: #3F35B6;
+@value colorBase: #4E42E4;
+@value colorDarkBase: #3F35B6;
+@value lightBase: rgba(78, 66, 228, 0.1);
+
+/* blue */
+
+@value blue: #42B9FC;
+@value darkBlue: #2c71c2;
+@value kashmirBlue: #475993;
+@value creamCan: #1D63CB;
+@value colorBlue: #42B9FC;
+
+/* gray */
+
+@value gray: #828282;
+@value regentGray: #7C8A98;
+@value grayChateau: #AFAFAF;
+@value grayDog: #AFAFAF;
+@value alto: #DBDBDB;
+@value concrete: #F2F2F2;
+@value alabaster: #F9F9F9;
+@value athens: #F0F3F5;
+@value colorAlto: #DBDBDB;
+@value colorConcrete: #F2F2F2;
+@value colorGrayDog: #AFAFAF;
+@value colorAlabaster: #F9F9F9;
+
+/* green */
+
+@value jungleGreen: #1FAC4F;
+@value colorGreen: #1FAC4F;
+
+/* red */
+
+@value red: #FB888A;
+@value darkRed: #EB6E70;
+@value vividRed: #F54747;
+@value colorVividRed: #F54747;
+@value colorRed: #F54747;
+
+/* purple */
+
+@value nauticalBlue: #908EF1;
+@value purple: #9243DC;
+@value darkPurple: #6156C9;
+@value blackPurple: #2A2532;
+
+/* yellow */
+
+@value yellow: #FCBD42;
+@value yellowOrange: #FBAD43;
+@value colorOrange: #FBAD43;
+@value colorYellow: #FCBD42;

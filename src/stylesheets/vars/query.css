@@ -1,0 +1,20 @@
+@value minWidth: 1440px;
+@value maxWidth: 1300px;
+@value minHeight: 722px;
+
+@value newMinWidth: 1280px;
+@value newMaxWidth: 1280px;
+
+@value innerContentWidth: 1260px;
+
+@value mobileMaxInnerWidth: 572px;
+
+@value desktopScale: 0.888888;
+@value innerWidth: 1240px;
+
+@value mobileMax: 767px;
+@value tabletMin: 768px;
+@value tabletMax: 1279px;
+@value desktopMin: 1280px;
+
+@value newMinContainerWidth: 1180px;

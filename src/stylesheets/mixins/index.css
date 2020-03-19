@@ -1,0 +1,110 @@
+@value colorBase, colorAlto, colorGrayDog, colorVividRed, colorConcrete from '~Styles/vars/colors.css';
+@value newMaxWidth from '~Styles/vars/query.css';
+
+@define-mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@define-mixin vertical-center {
+  display: flex;
+  align-items: center;
+}
+
+@define-mixin horizontal-center {
+  display: flex;
+  justify-content: center;
+}
+
+@define-mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+@define-mixin round {
+  border-radius: 50%;
+}
+
+@define-mixin items_centered_4 $width {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &::after {
+    content: '';
+    width: $width;
+  }
+
+  &::before {
+    content: '';
+    width: $width;
+    order: 1;
+  }
+}
+
+@define-mixin items_centered_3 $width {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &::after {
+    content: '';
+    width: $width;
+  }
+}
+
+@define-mixin cuttedText {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@define-mixin mobileContent {
+  width: 100%;
+  max-width: 572px;
+  padding-right: 16px;
+  padding-left: 16px;
+  box-sizing: border-box;
+}
+
+@define-mixin innerContainer {
+  width: newMaxWidth;
+  padding: 0 10px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@define-mixin field {
+  max-width: 100%;
+  min-height: 38px;
+  padding: 7px 12px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #404040;
+  font: 14px/24px 'Ubuntu Regular';
+  border: 1px solid #DBDBDB;
+  transition: border 0.1s ease-in;
+
+  &:hover {
+    border-color: #AFAFAF;
+  }
+
+  &:focus:not(.error) {
+    border-color: #4E42E4;
+    box-shadow: 0 0 0 1px #4E42E4;
+  }
+
+  &:disabled {
+    border-color: #F2F2F2;
+    background-color: #F2F2F2;
+  }
+
+  &.error {
+    border-color: #F54747;
+  }
+
+  &::placeholder {
+    color: #AFAFAF;
+  }
+}

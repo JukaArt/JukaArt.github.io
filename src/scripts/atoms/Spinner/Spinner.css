@@ -1,0 +1,33 @@
+@keyframes preloaderRotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes preloaderAnimate {
+  0% {
+    stroke-dasharray: 1px, 200px;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 100px, 200px;
+    stroke-dashoffset: -15px;
+  }
+
+  100% {
+    stroke-dasharray: 100px, 200px;
+    stroke-dashoffset: -120px;
+  }
+}
+
+.root {
+  size: 40px;
+  animation: preloaderRotate 1.4s linear infinite;
+}
+
+.rolling {
+  animation: preloaderAnimate 1.4s ease-in-out infinite;
+  stroke-dasharray: 80px, 200px;
+  stroke-dashoffset: 0;
+}

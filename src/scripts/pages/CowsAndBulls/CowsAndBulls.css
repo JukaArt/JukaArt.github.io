@@ -1,0 +1,37 @@
+.cowsGame {
+  size: 100vw 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+}
+
+.input {
+  width: 210px;
+  background: none;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 70px;
+  text-align: center;
+  border-bottom: 1px solid white;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input,
+button {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.button {
+  padding: 40px;
+  border: 2px solid white;
+}
